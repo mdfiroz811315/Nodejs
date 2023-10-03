@@ -1,4 +1,5 @@
-const express = require('express')
+const express = require('express');
+var mongoose = require("./Config/MongoDBConfig");
 var userRoute = require("./Route/userRoute")
 //let contactUs = require("./Route/ContactUs")
 const app = express()
@@ -9,6 +10,9 @@ const port = 5000
 
 app.use("/user",userRoute)
 app.use("/contact",require("./Route/ContactUs"))
+
+
+
 
 
 app.listen(port, () => {

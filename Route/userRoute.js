@@ -23,4 +23,20 @@ router.post('/about', (req, res) => {
 router.get('/header', (req, res) => {
     userController.header(req,res);
 })  
+// define the home page route
+router.get('/getAllUser', (req, res) => {
+    userController.getAllUser(req,res);
+})
+// define the home page route
+router.get('/getParticularUser/:userId', (req, res) => {
+    userController.getParticularUser(req,res);
+})
+
+router.post('/saveUser', (req, res) => {
+    userController.saveUser(req,res);
+}) 
+// define the home page route
+router.put('/updateUser/:userId', (req, res) => {
+    userController.updateUser(req,res);
+})
 module.exports = router
